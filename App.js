@@ -1,3 +1,5 @@
+// Este é um aplicativo para usar o sensor de acelerometro do celular/dispositivo movel. ele irá calcular a força G e dizer o quanto o dipositivo está acelerando e quanta velocidade ele esta tendo
+
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Accelerometer } from "expo-sensors";
@@ -10,6 +12,7 @@ export default function App() {
   });
   const [subscription, setSubscription] = useState(null);
 
+  // aqui ele irá definir o intervalo para atualização dos valores X, Y e Z em segundos
   const _slow = () => Accelerometer.setUpdateInterval(400);
   const _fast = () => Accelerometer.setUpdateInterval(16);
 
